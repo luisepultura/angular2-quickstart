@@ -1,0 +1,6 @@
+<h1>{{title}}</h1>
+<div [style.color]="momoColor">
+    Hello {{name}}
+</div>
+<input type="text" [(ngModel)]="name">
+<button (click)="changeColor()">Change color</button>
