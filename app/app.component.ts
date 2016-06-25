@@ -1,9 +1,11 @@
 import {Component} from '@angular/core';
+import { CustomersComponent } from './customer/customers.component';
 
 @Component({
+    moduleId: module.id,
     selector: 'my-app',
-    templateUrl: 'app/app.component.html'
-    
+    templateUrl: 'app.component.html',
+    directives: [CustomersComponent]    
 })
 export class AppComponent {
     //[] means property binding; one way up from Component to DOM
@@ -15,9 +17,9 @@ export class AppComponent {
     /*  binding to style property of the div, in this case color property of style
         bind to component to any property in DOM
     */
-    momoColor = 'blue';
+    momoColor = 'green';
 
     changeColor() {
-        this.momoColor = this.momoColor === 'blue' ? 'red' : 'blue';
+        this.momoColor = this.momoColor === 'green' ? 'red' : 'green';
     }
 }
