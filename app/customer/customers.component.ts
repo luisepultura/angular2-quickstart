@@ -6,8 +6,7 @@ import { CustomerService } from './customer.service';
     moduleId: module.id,
     selector: 'app-customers',
     templateUrl: 'customers.component.html',
-    directives: [CustomerComponent],
-    providers: [CustomerService]//injection
+    directives: [CustomerComponent]
 })
 export class CustomersComponent implements OnInit {
     customers: any[];

@@ -1,11 +1,16 @@
 import {Component} from '@angular/core';
-import { CustomersComponent } from './customer/customers.component';
+// import { CustomersComponent } from './customer/customers.component';
+// import { CustomerService } from './customer/customer.service';
+
+//here is a barrel
+import { CustomersComponent, CustomerService } from './customer/index';
 
 @Component({
     moduleId: module.id,
     selector: 'my-app',
     templateUrl: 'app.component.html',
-    directives: [CustomersComponent]    
+    directives: [CustomersComponent],
+    providers: [CustomerService]   
 })
 export class AppComponent {
     //[] means property binding; one way up from Component to DOM
